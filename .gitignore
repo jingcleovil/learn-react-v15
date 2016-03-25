@@ -1,3 +1,5 @@
 node_modules/
 bower_components/
 .ID_Store
+deploy.json
+dist/*
