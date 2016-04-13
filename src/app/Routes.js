@@ -11,7 +11,6 @@ import configureStore from './Stores';
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
-
 import Layout from './Layout';
 
 class Routes extends Component {

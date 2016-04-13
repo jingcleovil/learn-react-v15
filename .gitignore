@@ -3,3 +3,5 @@ bower_components/
 .ID_Store
 deploy.json
 dist/*
+npm-debug.log
+src/client/*
