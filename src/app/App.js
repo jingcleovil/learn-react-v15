@@ -5,18 +5,15 @@ import Header from './partials/Header';
 import Footer from './partials/Footer';
 import Nav from './partials/Nav';
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Nav/>
-                <Header/>
-                <div className="container">
-                    { this.props.children }
-                </div>
-            </div>
-        );
-    }
-}
+const App = ({ children }) => (
+    <div>
+        <Nav/>
+        <Header/>
+        <div className="container">
+            { children }
+        </div>
+    </div>
+)
+
 
 export default App

@@ -7,10 +7,12 @@ import browserHistory from 'react-router/lib/browserHistory';
 import IndexRoute from 'react-router/lib/IndexRoute';
 import configureStore from './Stores';
 
+import Todo from './todo/containers/Todo';
+import App from './App';
+
 const store = configureStore();
 const history = syncHistoryWithStore(browserHistory, store);
 
-import App from './App';
 
 class Routes extends Component {
     render() {
@@ -18,7 +20,7 @@ class Routes extends Component {
             <Provider store={ store }>
                 <Router history={ history }>
                     <Route path="/" component={ App }>
-                        
+                        <IndexRoute component={ Todo }/>
                     </Route>
                 </Router>
             </Provider>
