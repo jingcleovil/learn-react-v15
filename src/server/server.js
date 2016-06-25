@@ -19,7 +19,7 @@ app.use(Express.static(PATH_DIST, ASSETS_CONFIG));
 
 app.get('*', (req, res) => {
     res.render('index', {
-        pageTitle: `Learn React v15.0`,
+        pageTitle: `TODO - Learn React v15.0`,
         cssCommon: `/css/common.min.css`,
         jsVendor: `/js/vendors.js`,
         jsApp: `/js/bundle.js`
