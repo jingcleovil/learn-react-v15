@@ -17,7 +17,7 @@ class Routes extends Component {
         return (
             <Provider store={ store }>
                 <Router history={ history }>
-                    <Route path="/(:page)" component={ Layout }>
+                    <Route path="/(:page)" component={ App }>
                         
                     </Route>
                 </Router>
