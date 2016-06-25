@@ -18,13 +18,11 @@ elixir(function(mix){
     }
 
     mix
-        .rubySass(['_bootstrap.scss'])
+        .sass(['style.scss'], sourceCss + 'style.css')
         .copy(bower + 'font-awesome/css/font-awesome.min.css', sourceCss + 'font-awesome.min.css')
         .copy(bower + 'font-awesome/fonts', distFile + '/fonts/font-awesome')
-        .copy(bower + 'bootstrap/dist/css/bootstrap.min.css', sourceCss + 'bootstrap.min.css')
         
         .styles([
-            'bootstrap.min.css',
-            'style.css',
+           'style.css',
         ],'dist/css/common.min.css');
 });
