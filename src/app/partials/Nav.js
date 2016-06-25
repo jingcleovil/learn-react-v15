@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Link from 'react-router/lib/Link';
 
 class Nav extends Component {
     render() {
         return (
             <nav className="navbar navbar-inverse navbar-fixed-top">
-                <div className="container-fluid">
+                <div className="container">
                     <div className="navbar-header">
                         <a className="navbar-brand">
                             Learn React 15
@@ -13,7 +14,13 @@ class Nav extends Component {
                     <div className="collapse navbar-collapse">
                         <ul className="nav navbar-nav">
                             <li>
-                                <a href="">Home</a>
+                                <Link to="/">Home</Link>
+                            </li>
+                            <li>
+                                <Link to="/about">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact-us">Contact Us</Link>
                             </li>
                         </ul>
                     </div>
