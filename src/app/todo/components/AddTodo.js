@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { addTodo } from '../actions';
-import { connect } from 'react-redux';
 
-const AddTodo = ({ dispatch }) => {
+const AddTodo = ({ addTodo }) => {
     let task;
 
     return (
@@ -10,7 +8,7 @@ const AddTodo = ({ dispatch }) => {
             e.preventDefault();
             if(!task.value.trim())  return;
             const { value } = task;
-            dispatch(addTodo(value));
+            addTodo(value);
             task.value = '';
         }}>
             <div className="form-group">
@@ -22,4 +20,4 @@ const AddTodo = ({ dispatch }) => {
     )
 }
 
-export default connect()(AddTodo)
+export default AddTodo

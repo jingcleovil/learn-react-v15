@@ -21,7 +21,6 @@ elixir(function(mix){
         .sass(['style.scss'], sourceCss + 'style.css')
         .copy(bower + 'font-awesome/css/font-awesome.min.css', sourceCss + 'font-awesome.min.css')
         .copy(bower + 'font-awesome/fonts', distFile + '/fonts/font-awesome')
-        
         .styles([
            'style.css',
         ],'dist/css/common.min.css');

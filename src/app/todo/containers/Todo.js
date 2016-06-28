@@ -5,11 +5,11 @@ import * as actions from '../actions';
 import AddTodo from '../components/AddTodo';
 import VisibleTodoList from './VisibleTodoList';
 
-const Todo = () => (
+const Todo = ({ addTodo }) => (
 	<div className="panel panel-default">
 		<div className="panel-heading">Todo Task</div>
 		<div className="panel-body">
-			<AddTodo/>
+			<AddTodo addTodo={ addTodo }/>
 			<br/>
 			<VisibleTodoList/>
 		</div>
@@ -24,9 +24,5 @@ export default connect(
             todos
 		}
 	},
-	dispatch => {
-		return {
-			action: bindActionCreators(actions,  dispatch)
-		}
-	}
+	actions
 )(Todo)
